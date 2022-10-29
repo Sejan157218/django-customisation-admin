@@ -1,11 +1,14 @@
+import imp
 from django.contrib import admin
 from django.urls import path
 from blogs.admin import blog_site
+from bookstore.admin import bookStore_site
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blogadmin/',  ),
+    path('blogadmin/', blog_site.urls),
+    path('bookstoreadmin/',bookStore_site.urls)
 
 ]
 
